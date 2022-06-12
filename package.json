@@ -25,7 +25,8 @@
 		"react-scripts": "5.0.1",
 		"tslog": "^3.3.3",
 		"typescript": "^4.7.3",
-		"web-vitals": "^2.1.4"
+		"web-vitals": "^2.1.4",
+		"ts-node": "^10.8.1"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
@@ -36,8 +37,7 @@
 		"@types/lodash": "^4.14.182",
 		"@types/node": "^16.11.39",
 		"@types/react": "^18.0.12",
-		"@types/react-dom": "^18.0.5",
-		"ts-node": "^10.8.1"
+		"@types/react-dom": "^18.0.5"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -46,7 +46,7 @@
 		"eject": "react-scripts eject",
 		"nodemon:backend": "nodemon -e ts,json --watch server --exec 'npm run backend'",
 		"backend": "ts-node -O '{\"module\": \"commonjs\"}' ./server/server.ts",
-		"serve": "concurrently 'npm run start --no-browser' 'npm run nodemon:backend'"
+		"serve": "concurrently 'BROWSER=none npm run start' 'npm run nodemon:backend'"
 	},
 	"eslintConfig": {
 		"extends": [
